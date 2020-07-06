@@ -1,7 +1,14 @@
 <template>
 	<div id="app">
-		<CharacterView />
-		<CharacterCreator />
+		<section class="hero is-fullheight">
+			<div class="hero-body">
+				<div class="container has-text-centered">
+					<b-button type="is-primary" @click="changeView">{{ this.title }}</b-button>
+					<CharacterView v-show="showCharacters"/>
+					<CharacterCreator v-show="showCreator"/>
+				</div>
+			</div>
+		</section>
 	</div>
 </template>
 
@@ -14,6 +21,26 @@ export default {
 	components: {
 		CharacterView,
 		CharacterCreator
+	},
+	data(){
+		return{
+			showCharacters: true,
+			showCreator: false,
+			title: "Create a Character"
+		}
+	},
+	methods: {
+		changeView(){
+			if(this.showCharacters == true){
+				this.showCharacters = false;
+				this.showCreator = true;
+				this.title = "Characters"
+			}else{
+				this.showCharacters = true;
+				this.showCreator = false;
+				this.title = "Create a Character";
+			}
+		}
 	}
 }
 </script>
