@@ -1,5 +1,4 @@
 module.exports = {
-	publicPath: '/test-mevn',
 	chainWebpack: config => {
 		config
 		.plugin('html')
