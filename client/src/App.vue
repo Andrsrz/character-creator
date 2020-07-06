@@ -1,9 +1,11 @@
 <template>
 	<div id="app">
 		<section class="hero is-fullheight">
-			<div class="hero-body">
+			<div class="hero-head">
 				<div class="container has-text-centered">
-					<b-button type="is-primary" @click="changeView">{{ this.title }}</b-button>
+					<b-button class="top-button" type="is-primary" @click="changeView">
+						{{ this.title }}
+					</b-button>
 					<CharacterView v-show="showCharacters"/>
 					<CharacterCreator v-show="showCreator"/>
 				</div>
@@ -46,6 +48,10 @@ export default {
 </script>
 
 <style lang="scss">
+.top-button {
+	margin: 20px;
+}
+
 // Import Bulma's core
 @import "~bulma/sass/utilities/_all";
 
