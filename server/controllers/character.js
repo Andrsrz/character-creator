@@ -12,3 +12,19 @@ exports.characters = (req, res, next) => {
 		res.json(characters);
 	});
 };
+
+/* Create new Character */
+exports.create_character = (req, res, next) => {
+	let character = new Character({
+		name: req.body.name,
+		profession: req.body.profession
+	});
+
+	character.save((err) => {
+		if(err)
+			return next(err);
+
+		/* Success */
+		res.status(201).json(character);
+	});
+};
