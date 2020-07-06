@@ -16,7 +16,8 @@
 				</b-field>
 			</div>
 			<br><br>
-			<b-button tag="input" native-type="submit" value="Submit" @click="createCharacter" />
+			<b-button type="is-success" tag="input" native-type="submit"
+			value="Submit" @click="createCharacter" />
 		</section>
 	</div>
 </template>
@@ -30,7 +31,7 @@ export default {
 		return{
 			name: '',
 			profession: '',
-			professions: ['Mage', 'Warrior', 'Thief']
+			professions: ['Mage', 'Warrior', 'Thief'],
 		}
 	},
 	methods: {

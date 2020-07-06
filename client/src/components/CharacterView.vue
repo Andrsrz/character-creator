@@ -1,6 +1,6 @@
 <template>
 	<div class="character-view">
-		<h1 class="title">Character View</h1>
+		<h1 class="title">Characters</h1>
 		<p v-for="(character, index) in characters" :key="index">
 			{{ character.name }} is a {{ character.profession }}
 		</p>
