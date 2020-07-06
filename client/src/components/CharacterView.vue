@@ -1,6 +1,6 @@
 <template>
 	<div class="character-view">
-		<h1>Character View</h1>
+		<h1 class="title">Character View</h1>
 	</div>
 </template>
 

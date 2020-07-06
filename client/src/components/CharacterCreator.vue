@@ -1,6 +1,6 @@
 <template>
 	<div class="character-creator">
-		<h1>Character Creator</h1>
+		<h1 class="title">Character Creator</h1>
 	</div>
 </template>
 
