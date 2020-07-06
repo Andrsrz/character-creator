@@ -8,6 +8,15 @@ import winston from 'winston';
 // Defining port
 const port = process.env.PORT || 9000;
 
+/* Mongo DB */
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB_CHARACTERCREATOR, { useNewUrlParser: true });
+const db = mongoose.connection;
+db.on('error', (error) => console.error(error));
+db.once('open', () => console.log('Connected to database!'));
+
+var charactersRouter = require('./routes/characters');
+
 // Defining app
 const app = express();
 
@@ -23,6 +32,7 @@ app.use(express.static(__dirname + '/views/'));
 
 // Defining the Routes
 app.use('/api', require('./routes/index'));
+app.use('/characters', charactersRouter);
 
 // Listening to port
 app.listen(port);
