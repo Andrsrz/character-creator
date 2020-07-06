@@ -1,16 +1,16 @@
 <template>
 	<div id="app">
-		<router-view />
+		<CharacterView />
 	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CharacterView from './components/CharacterView.vue'
 
 export default {
 	name: 'App',
 	components: {
-		HelloWorld
+		CharacterView
 	}
 }
 </script>
