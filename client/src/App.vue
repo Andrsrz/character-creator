@@ -6,7 +6,7 @@
 					<b-button class="top-button" type="is-primary" @click="changeView">
 						{{ this.title }}
 					</b-button>
-					<CharacterView v-show="showCharacters"/>
+					<CharacterView v-show="showCharacters" :characters="characters"/>
 					<CharacterCreator v-show="showCreator"/>
 				</div>
 			</div>
@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 import CharacterView from './components/CharacterView.vue'
 import CharacterCreator from './components/CharacterCreator.vue'
 
@@ -28,7 +30,8 @@ export default {
 		return{
 			showCharacters: true,
 			showCreator: false,
-			title: "Create a Character"
+			title: "Create a Character",
+			characters: null
 		}
 	},
 	methods: {
@@ -42,7 +45,14 @@ export default {
 				this.showCreator = false;
 				this.title = "Create a Character";
 			}
-		}
+		},
+		getCharacters(){
+			axios.get('http://localhost:9000/characters')
+				 .then(response => (this.characters = response.data));
+		},
+	},
+	mounted(){
+		this.getCharacters();
 	}
 }
 </script>
