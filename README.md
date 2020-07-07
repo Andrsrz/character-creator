@@ -5,7 +5,7 @@ Test Project using [menv-cli](https://github.com/madlabsinc/mevn-cli).
 * How to make a FullStack Application.
 * Deploy FullStack Application to Heroku.
 
-## Acknowledgemen
+## Acknowledgement
 This project was made posible thanks to [sominator](https://github.com/sominator).
 
 ## License
