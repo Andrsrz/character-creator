@@ -47,7 +47,7 @@ export default {
 			}
 		},
 		getCharacters(){
-			axios.get('http://localhost:9000/characters')
+			axios.get('https://character-creator-andrsrzdc.herokuapp.com/characters')
 				 .then(response => (this.characters = response.data));
 		},
 	},

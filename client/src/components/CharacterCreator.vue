@@ -40,7 +40,7 @@ export default {
 			this.profession = '';
 		},
 		createCharacter(){
-			axios.post('http://localhost:9000/characters', {
+			axios.post('https://character-creator-andrsrzdc.herokuapp.com/characters', {
 				name: this.name,
 				profession: this.profession
 			});
