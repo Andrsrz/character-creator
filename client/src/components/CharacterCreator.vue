@@ -31,7 +31,13 @@ export default {
 		return{
 			name: '',
 			profession: '',
-			professions: ['Mage', 'Warrior', 'Thief'],
+			professions: ['Mage',
+						  'Warrior',
+						  'Thief',
+						  'Wizard',
+						  'Hobbit',
+						  'Troll',
+						  'Elve'],
 		}
 	},
 	methods: {

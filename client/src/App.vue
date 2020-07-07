@@ -44,6 +44,7 @@ export default {
 				this.showCharacters = true;
 				this.showCreator = false;
 				this.title = "Create a Character";
+				this.getCharacterts();
 			}
 		},
 		getCharacters(){
